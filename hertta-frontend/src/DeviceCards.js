@@ -1,3 +1,4 @@
+// src/DeviceCards.js
 import React from 'react';
 import './DeviceCards.css';
 
@@ -19,6 +20,7 @@ function DeviceCards({ electricHeaters, interiorAirSensors, activeDevices, toggl
               />
               On/Off
             </label>
+            <p>Status: {activeDevices[heater.id] ? 'On' : 'Off'}</p>
           </div>
         ))}
         {interiorAirSensors.map((sensor) => (
@@ -37,6 +39,7 @@ function DeviceCards({ electricHeaters, interiorAirSensors, activeDevices, toggl
               />
               On/Off
             </label>
+            <p>Status: {activeDevices[sensor.sensorId] ? 'On' : 'Off'}</p>
           </div>
         ))}
       </div>
